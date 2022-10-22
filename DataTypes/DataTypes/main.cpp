@@ -8,6 +8,7 @@ using std::endl;
 #define delimiter "\n--------------------------------------------\n"
 
 //#define NUMERIC_TYPES
+//#define DECLARATION_OF_VARIABLES
 
 void main()
 {
@@ -30,6 +31,7 @@ void main()
 	cout << DBL_MIN << " ... " << DBL_MAX << endl;
 #endif
 
+#if defined DECLARATION_OF_VARIABLES
 	//Объявление переменных - Declaration of variable:
 	int _1stPlace;
 	//int for;
@@ -43,7 +45,7 @@ void main()
 	//инициализация (initialisation) - присвоение начального значения.
 	//проинициализировать
 
-	double price_of_coffe;	
+	double price_of_coffe;
 	//snake_case_style - общепринятый стиль в языке C++
 	//camelCaseStyle (pascalCaseStyle)
 	//BigCamel
@@ -53,6 +55,24 @@ void main()
 	cout << "Введите количество чашек: "; cin >> number_of_cups;
 	double total_price = price_of_coffe * number_of_cups;
 	cout << "Общая стоимость покупки: " << total_price << "\n";
+#endif // DECLARATION_OF_VARIABLES
+
+	int speed = 0;
+	const int MAX_SPEED = 250;
+	//Литерал - это значение, которое вопринимается как есть.
+	//https://cplusplus.com/doc/tutorial/constants/
+	5;		//числовая константа типа 'int'
+	5.;		//числовая константа типа 'double'
+	5.f;	//числовая константа типа 'float'
+	5ULL;	//числовая константа типа 'unsigned long long'
+	cout << sizeof(5.f) << endl;
+	cout << typeid(5.f).name() << endl;
+
+	cout << '+' << endl;
+	cout << sizeof('+') << endl;
+	cout << typeid('+').name() << endl;
+	cout << sizeof('+') << endl;
+	cout << sizeof("Hello") << endl;
 }
 /*
 -------------------------------------------------
