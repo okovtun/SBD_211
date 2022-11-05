@@ -1,4 +1,4 @@
-//DataTypes
+п»ї//DataTypes
 #include<iostream>
 using namespace std;
 using std::cin;
@@ -32,39 +32,39 @@ void main()
 #endif
 
 #if defined DECLARATION_OF_VARIABLES
-	//Объявление переменных - Declaration of variable:
+	//РћР±СЉСЏРІР»РµРЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С… - Declaration of variable:
 	int _1stPlace;
 	//int for;
 	int a;
 	double price;
 	//price = 0;
-	//cout << "Введите цену чегототам: ";  cin >> price;
+	//cout << "Р’РІРµРґРёС‚Рµ С†РµРЅСѓ С‡РµРіРѕС‚РѕС‚Р°Рј: ";  cin >> price;
 	//cout << price << endl;
-	//undeclared identifier - необъявленный идентификатор (необъявленное имя)
+	//undeclared identifier - РЅРµРѕР±СЉСЏРІР»РµРЅРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ (РЅРµРѕР±СЉСЏРІР»РµРЅРЅРѕРµ РёРјСЏ)
 
-	//инициализация (initialisation) - присвоение начального значения.
-	//проинициализировать
+	//РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ (initialisation) - РїСЂРёСЃРІРѕРµРЅРёРµ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ.
+	//РїСЂРѕРёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ
 
 	double price_of_coffe;
-	//snake_case_style - общепринятый стиль в языке C++
+	//snake_case_style - РѕР±С‰РµРїСЂРёРЅСЏС‚С‹Р№ СЃС‚РёР»СЊ РІ СЏР·С‹РєРµ C++
 	//camelCaseStyle (pascalCaseStyle)
 	//BigCamel
 	//smallCamel
 	int number_of_cups;
-	cout << "Введите стоимость чашки кофе: "; cin >> price_of_coffe;
-	cout << "Введите количество чашек: "; cin >> number_of_cups;
+	cout << "Р’РІРµРґРёС‚Рµ СЃС‚РѕРёРјРѕСЃС‚СЊ С‡Р°С€РєРё РєРѕС„Рµ: "; cin >> price_of_coffe;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°С€РµРє: "; cin >> number_of_cups;
 	double total_price = price_of_coffe * number_of_cups;
-	cout << "Общая стоимость покупки: " << total_price << "\n";
+	cout << "РћР±С‰Р°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ РїРѕРєСѓРїРєРё: " << total_price << "\n";
 #endif // DECLARATION_OF_VARIABLES
 
 	int speed = 0;
 	const int MAX_SPEED = 250;
-	//Литерал - это значение, которое вопринимается как есть.
+	//Р›РёС‚РµСЂР°Р» - СЌС‚Рѕ Р·РЅР°С‡РµРЅРёРµ, РєРѕС‚РѕСЂРѕРµ РІРѕРїСЂРёРЅРёРјР°РµС‚СЃСЏ РєР°Рє РµСЃС‚СЊ.
 	//https://cplusplus.com/doc/tutorial/constants/
-	5;		//числовая константа типа 'int'
-	5.;		//числовая константа типа 'double'
-	5.f;	//числовая константа типа 'float'
-	5ULL;	//числовая константа типа 'unsigned long long'
+	5;		//С‡РёСЃР»РѕРІР°СЏ РєРѕРЅСЃС‚Р°РЅС‚Р° С‚РёРїР° 'int'
+	5.;		//С‡РёСЃР»РѕРІР°СЏ РєРѕРЅСЃС‚Р°РЅС‚Р° С‚РёРїР° 'double'
+	5.f;	//С‡РёСЃР»РѕРІР°СЏ РєРѕРЅСЃС‚Р°РЅС‚Р° С‚РёРїР° 'float'
+	5ULL;	//С‡РёСЃР»РѕРІР°СЏ РєРѕРЅСЃС‚Р°РЅС‚Р° С‚РёРїР° 'unsigned long long'
 	cout << sizeof(5.f) << endl;
 	cout << typeid(5.f).name() << endl;
 
@@ -77,7 +77,7 @@ void main()
 /*
 -------------------------------------------------
 	//			type name;
-	//Идентификатор (identifier) - это имя.
+	//РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ (identifier) - СЌС‚Рѕ РёРјСЏ.
 
 1. ABC...Zabc...z012...9_;
 2. 
