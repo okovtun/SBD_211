@@ -4,10 +4,15 @@ https://www.youtube.com/watch?v=jy029M3X3a4&list=PLeqyOOqxeiIP1btvvWl1ww22b6gvA2
 TOREAD:
 https://cplusplus.com/doc/tutorial/constants/
 
+Book:
+https://drive.google.com/drive/folders/1mIhAKMp5-Jpy6s5X8u924tRCXFEdHE_z?usp=share_link
+
 TODO:
 1. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/Geometria1.txt
 2. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg
 3. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/HardChess.jpg
+4. Вывести на экран треугольник Паскаля.
+5. Зарегистрироваться на github.com!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 DONE:
 0. Написать программу Shooter, которая по нажатой клавише определяет действие ползователя:

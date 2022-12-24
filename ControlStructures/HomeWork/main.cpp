@@ -1,102 +1,184 @@
-#include<iostream>
-#include<conio.h>
-
+#include <iostream>
 using namespace std;
 
-//#define SHOOTER
-//#define FACTORIAL
-//#define DEGREE_OF_NUMBER
-#define ASCII
-
+#define Snowflake
+//#define SQ
+//#define T1
+//#define T2
+//#define T3
+//#define T4
+//#define Romb 
+//#define EasyChess
+//#define Chessboard
+//#define HardChess
 void main()
 {
-	setlocale(LC_ALL, "Russian");
-
-#if defined SHOOTER
-
-	char key;
-	cout << "Shooter" << endl;
-
-	do
-	{
-		cout << "Ввдите ваши действия:" << endl;
-		key = _getch();
-		if ((int)key == 119)
+	int N = 0;
+	cout << "Enter number: ";
+	cin >> N;
+#ifdef Snowflake
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++)
 		{
-			cout << "w - вперед" << endl;
+			if (i == N / 2 || j == N / 2 || i == j || (i + j) == N - 1)
+				cout << " *";
+			else
+				cout << "  ";
 		}
-		else if (key == 's')
-		{
-			cout << "s - назад" << endl;
-		}
-		else if (key == 97)
-		{
-			cout << "a - влево" << endl;
-		}
-		else if (key == 100)
-		{
-			cout << "d - вправо" << endl;
-		}
-		else if (key == ' ')
-		{
-			cout << "Space = прыжок" << endl;
-		}
-		else if ((int)key == 13)
-		{
-			cout << "Enter = огонь" << endl;
-		}
-		else
-		{
-			cout << "Нет определения!" << endl;
-		}
-
-	} while (key != 27);
-
-
-
-
-#endif
-
-#if defined FACTORIAL
-
-	int num_factorial;
-	cout << "Введите число для вычесления факториала:";
-	cin >> num_factorial;
-	int result = 1;
-	for (int i = 1; i <= num_factorial; ++i)
-	{
-		result = result * i;
+		cout << endl;
 	}
-	cout << num_factorial << "!=*" << result << endl;
-#endif
-
-#if defined DEGREE_OF_NUMBER
-
-	int degr, num;
-	double result;
-	cout << "Введите основание степени:";
-	cin >> num;
-	cout << "Введите показатель степени:";
-	cin >> degr;
-	result = 1;
-	for (int i = 0; i < degr; i++)
+#endif // Snowflake
+#ifdef SQ
+	for (int i = 0; i < N; i++)
 	{
-		result = result * num;
+		for (int j = 0; j < N; j++)
+		{
+			cout << "*";
+		}
+		cout << endl;
 	}
-	cout << num << "в степени" << degr << "=" << result;
-#endif
-
-#if defined ASCII
-	int i;
-
-	for (i = 0; i < 256; i++)
+#endif // SQ
+#ifdef T1
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j <= i; j++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+#endif // T1
+#ifdef T2
+	for (int i = 0; i < N; i++) {
+		for (int j = N; j > i; j--)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+#endif // T2
+#ifdef T3
+	for (int i = 0; i < N; i++)
 	{
-		if (i % 16 == 0)cout << endl;
-		cout << (char)i << " ";
+		for (int j = 0; j < N; j++)
+		{
+			if (i <= j)
+				cout << "*";
+			else
+				cout << " ";
+		}
+		cout << endl;
 	}
-	cout << endl;
-#endif
-
-
+#endif // T3
+#ifdef T4
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			if (i + j >= N - 1)
+				cout << "*";
+			else
+				cout << " ";
+		}
+		cout << endl;
+	}
+#endif // T4
+#ifdef Romb
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			if (i + j == N / 2 - 1 || i >= N / 2 && i + j - N / 2 == N - 1)
+				cout << "/";
+			else if (i >= N / 2 && i - j == N - i + j || j >= N / 2 && j - i == N - j + i)
+				cout << "\\";
+			else
+				cout << " ";
+		}
+		cout << endl;
+	}
+#endif // Romb
+#ifdef EasyChess
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			if (i % 2 > 0)
+			{
+				if (j % 2 > 0)
+					cout << "+ ";
+				else
+					cout << "- ";
+			}
+			else
+			{
+				if (j % 2 == 0)
+					cout << "+ ";
+				else
+					cout << "- ";
+			}
+		}
+		cout << endl;
+	}
+#endif // Easy Chess
+#ifdef Chessboard
+	{
+		char symbblock = 219;
+		char verticalline = 179;
+		char horizontalline = 196;
+		char cornerleftup = 218;
+		char cornerleftdown = 192;
+		char cornerrightup = 191;
+		char cornerrightdown = 217;
+		for (int i = 0; i < N + 1; i++)
+		{
+			for (int j = 0; j < N + 1; j++)
+			{
+				if (j == 0 && i == 0)
+					cout << cornerleftup;
+				if (j == N && i == 0)
+					cout << cornerrightup;
+				if (i == N && j == 0)
+					cout << cornerleftdown;
+				if (j == N && i == N)
+					cout << cornerrightdown;
+				if (i < N && i > 0 && j == 0 || i != N && i != 0 && j == N)
+					cout << verticalline;
+				else if (j < N && j > 0 && i == 0 || j > 0 && j != N && i == N)
+					cout << horizontalline << horizontalline;
+				if (i > 0 && i < N && j > 0 && j < N)
+				{
+					if (i % 2 > 0)
+					{
+						if (j % 2 > 0)
+							cout << symbblock << symbblock;
+						else
+							cout << "  ";
+					}
+					else
+					{
+						if (j % 2 == 0)
+							cout << symbblock << symbblock;
+						else
+							cout << "  ";
+					}
+				}
+			}
+			cout << endl;
+		}
+	}
+#endif // Chessboard
+#ifdef HardChess
+	for (int i = 0; i < N * N; i++)
+	{
+		for (int j = 0; j < N * N; j++)
+		{
+			if ((i / N + j / N) & 1)
+				cout << "  ";
+			else
+				cout << "* ";
+		}
+		cout << endl;
+	}
+#endif // HardChess
 
 }
